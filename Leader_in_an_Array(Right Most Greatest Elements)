@@ -1,0 +1,31 @@
+//Leader: ith element should be greater than equal to jth element hen it is leader- right most greater element
+
+
+class Leader{
+    public void Greater(int[] arr)
+    {
+        for(int i=0;i<arr.length;i++)
+        {
+            boolean isleader = true;
+            for(int j=i+1;j<arr.length;j++)
+            {
+                if(arr[j]>=arr[i])
+                {
+                    isleader=false;
+                    break;
+                }
+            }
+            if(isleader==true)
+            {
+                System.out.println(arr[i]);
+            }
+
+        }
+    }
+    public static void main(String[] args) {
+
+        int arr[]={8,11,5,11,7,6,3};
+        Leader l=new Leader();
+        l.Greater(arr);        
+    }
+}
