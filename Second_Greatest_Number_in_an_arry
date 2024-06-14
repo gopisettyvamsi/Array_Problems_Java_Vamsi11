@@ -1,0 +1,41 @@
+public class Second_Greatest {
+
+    int max1=0,max2=0;
+    public void SG(int[] a){
+        
+        if(a[0]>max1)
+        {
+            max1=a[0];
+            max2=a[1];
+        }
+        else
+        {
+            max1=a[1];
+            max2=a[0];
+        }
+        for(int i=2;i<a.length;i++){
+            if(a[i]>max1){
+                max2=max1;
+                max1=a[i];
+            }
+            else{
+                max2=a[i];
+            }
+        }
+        System.out.println(a[1]);
+        
+
+    }
+    
+}
+class main{
+    public static void main(String[] args) {
+        int[] a={20,42,6,30,88};
+        Second_Greatest sg= new Second_Greatest();
+        sg.SG(a);
+
+        
+       
+        
+    }
+}
